@@ -19,7 +19,7 @@ const NotePage = ({history}) => {
 
     let getNote = async () => {
         if(noteId === 'new') return;
-        let response = await fetch(`/api/notes/${noteId}`);
+        let response = await fetch(`https://blooming-sierra-19033.herokuapp.com/api/notes/${noteId}`);
         let data = await response.json();
         setNote(data);
 
@@ -38,7 +38,7 @@ const NotePage = ({history}) => {
     }
 
     let createNote = async () => {
-        fetch(`/api/notes/create/`,
+        fetch(`https://blooming-sierra-19033.herokuapp.com/api/notes/create/`,
         {
             method : "POST",
             headers: {
@@ -49,7 +49,7 @@ const NotePage = ({history}) => {
     }
 
     let updateNote = async () => {
-        fetch(`/api/notes/${noteId}/update/`,
+        fetch(`https://blooming-sierra-19033.herokuapp.com/api/notes/${noteId}/update/`,
         {
             method : "PUT",
             headers: {
@@ -60,7 +60,7 @@ const NotePage = ({history}) => {
     }
 
     let deleteNote = async () => {
-        fetch(`/api/notes/${noteId}/delete/`,
+        fetch(`https://blooming-sierra-19033.herokuapp.com/api/notes/${noteId}/delete/`,
         {
             method : "DELETE",
             headers: {

@@ -3,7 +3,7 @@ import ListItem from '../components/ListItem';
 import AddButton from '../components/AddButton';
 
 // const fetch = require('node-fetch');
-const axios = require('axios');
+// const axios = require('axios');
 
 const NotesListPage = () => {
   
@@ -13,7 +13,7 @@ const NotesListPage = () => {
     }, [])
 
     let getNotes = async () => {
-        let response = await fetch("/api/notes/");
+        let response = await fetch("https://blooming-sierra-19033.herokuapp.com/api/notes/");
         let data = await response.json();
         setNotes(data);
     
